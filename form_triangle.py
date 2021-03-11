@@ -6,10 +6,14 @@ def form_triangle(num1,num2,num3):
     failure="Triangle can't be formed"
 
     #Write your logic here
-
-    #Use the following messages to return the result wherever necessary
+    l = [num1, num2, num3]
+    for n in l:
+        if n >= l[(l.index(n)+1)%3]+l[(l.index(n)+2)%3]:
+            return failure
     return success
-    return failure
+    #Use the following messages to return the result wherever necessary
+    
+    
 
 #Provide different values for the variables, num1, num2, num3 and test your program
 num1=3
